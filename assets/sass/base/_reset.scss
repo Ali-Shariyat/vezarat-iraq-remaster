@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: pro-fast, $default-fonts;
+  outline: none;
+}
+
+.font-family-roboto {
+  font-family: roboto, $default-fonts;
+}
+
+a {
+  &, &:active, &:hover {
+    text-decoration: none;
+    color: inherit;
+    transition: all .1s ease;
+  }
+
+  &:hover {
+    & img {
+      opacity: .75;
+    }
+  }
+}
+
+ul li {
+  list-style: none;
+}

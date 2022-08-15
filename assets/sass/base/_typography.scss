@@ -1,0 +1,188 @@
+.dir-ltr {
+  direction: ltr;
+}
+
+//.overflow-hidden {
+//  overflow: hidden;
+//}
+//
+//.overflow-x-hidden {
+//  overflow-x: hidden;
+//}
+
+.truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+
+//==========================================
+//cursor
+//==========================================
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+//==========================================
+//border
+//==========================================
+@for $i from 1 through 10 {
+  .border-radius-#{$i*5} {
+    border-radius: #{$i*5}px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .bw-#{$i} {
+    border-width: #{$i}px;
+  }
+  .btw-#{$i} {
+    border-top-width: #{$i}px;
+  }
+  .brw-#{$i} {
+    border-right-width: #{$i}px;
+  }
+  .btw-#{$i} {
+    border-bottom-width: #{$i}px;
+  }
+  .blw-#{$i} {
+    border-left-width: #{$i}px;
+  }
+}
+
+.bs-solid {
+  border-style: solid;
+}
+
+.bs-dashed {
+  border-style: dashed;
+}
+
+.bs-dotted {
+  border-style: dotted;
+}
+
+.bts-solid {
+  border-top-style: solid;
+}
+
+.bts-dashed {
+  border-top-style: dashed;
+}
+
+.bts-dotted {
+  border-top-style: dotted;
+}
+
+.bbs-solid {
+  border-bottom-style: solid;
+}
+
+.bbs-dashed {
+  border-bottom-style: dashed;
+}
+
+.bbs-dotted {
+  border-bottom-style: dotted;
+}
+
+.bls-solid {
+  border-left-style: solid;
+}
+
+.bls-dashed {
+  border-left-style: dashed;
+}
+
+.bls-dotted {
+  border-left-style: dotted;
+}
+
+.brs-solid {
+  border-right-style: solid;
+}
+
+.brs-dashed {
+  border-right-style: dashed;
+}
+
+.brs-dotted {
+  border-right-style: dotted;
+}
+
+//==========================================
+//colors
+//==========================================
+
+@include make-space($value-property, $breakpoints, val, $color);
+
+//==========================================
+// background image options
+//==========================================
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-position-center {
+  background-position: center;
+}
+
+.bg-size-cover {
+  background-size: cover;
+}
+
+.bg-attachment-fixed {
+  background-attachment: fixed;
+}
+
+//==========================================
+//images
+//==========================================
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.object-fit-fill {
+  object-fit: fill;
+}
+
+//==========================================
+//font size
+//==========================================
+
+@include make-space($numerical-property, $breakpoints, num, "");
+
+//==========================================
+//icon fonts
+//==========================================
+
+@include generate-icon();
+
+//==========================================
+//back black
+//==========================================
+.back-black {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 15;
+  visibility: hidden;
+  transition: all .2s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
